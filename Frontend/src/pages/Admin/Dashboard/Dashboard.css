@@ -1,0 +1,282 @@
+/* Windster Style Dashboard */
+.w-dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.w-grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media(min-width: 1024px) {
+  /* Cho phép 2 cột chia tỉ lệ 1:1 hoặc linh hoạt */
+  .w-grid-2-col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.w-card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f3f4f6;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header cho các card */
+.w-card-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.w-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.025em;
+}
+
+.w-card-subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+/* Stats Grid Row */
+.w-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media(min-width: 640px) {
+  .w-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width: 1024px) {
+  .w-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.w-stat-card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f3f4f6;
+  display: flex;
+  align-items: center;
+  padding: 1.25rem;
+  gap: 1rem;
+}
+
+.w-stat-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px; /* Vòng tròn mềm */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.w-stat-content {
+  flex: 1;
+}
+
+.w-stat-title {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.w-stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.w-stat-unit {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+/* Bảng dữ liệu */
+.w-view-all {
+  color: #0ea5e9;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.w-view-all:hover {
+  text-decoration: underline;
+}
+
+.w-table-wrapper {
+  overflow-x: auto;
+  margin-top: 0.5rem;
+}
+
+.w-small-table-wrapper {
+  margin-top: auto; /* đẩy xuống dưới */
+}
+
+.w-table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.w-table th {
+  background-color: #f9fafb;
+  color: #6b7280;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.w-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.w-table tr:last-child td {
+  border-bottom: none;
+}
+
+.w-tx-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.w-tx-bold {
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #374151;
+}
+
+.w-tx-name span {
+  font-weight: 400;
+  color: #6b7280;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.w-tx-route {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.w-tx-date {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.w-tx-amount {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Status Badges */
+.w-status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-green {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-red {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.status-yellow {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status-blue {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.status-gray {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+/* Custom Tooltip Recharts */
+.w-custom-tooltip {
+  background-color: white;
+  border: 1px solid #f3f4f6;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.w-tooltip-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.w-tooltip-value {
+  font-size: 0.875rem;
+  color: #111827;
+}
+
+/* Utility cho icon trong text */
+.inline {
+  display: inline-flex;
+  vertical-align: text-bottom;
+}
+.mr-1 {
+  margin-right: 0.25rem;
+}
+.text-gray-400 {
+  color: #9ca3af;
+}
+.text-blue-600 {
+  color: #2563eb;
+}
+.bg-blue-100 { background-color: #dbeafe; }
+.text-blue-600 { color: #2563eb; }
+.bg-emerald-100 { background-color: #d1fae5; }
+.text-emerald-600 { color: #059669; }
+.bg-amber-100 { background-color: #fef3c7; }
+.text-amber-600 { color: #d97706; }
+.bg-purple-100 { background-color: #f3e8ff; }
+.text-purple-600 { color: #9333ea; }
+

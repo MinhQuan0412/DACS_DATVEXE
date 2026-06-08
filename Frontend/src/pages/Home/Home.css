@@ -1,0 +1,291 @@
+.container {
+  max-width: 1040px; /* Futa utilizes slightly smaller container for tightness */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.bb-home-page {
+  background-color: #f7f7f7;
+  padding-bottom: 60px;
+  min-height: 100vh;
+}
+
+/* Home page hero section without blue background, just holds the banner */
+.bb-hero-section {
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 25px 20px 0px 20px; /* Small space from the header */
+  position: relative;
+}
+
+.hero-banner-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  aspect-ratio: 3 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 96, 196, 0.1);
+  display: flex;
+}
+
+.hero-bus-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.bb-commercial-filter {
+  filter: hue-rotate(190deg) saturate(1.2);
+}
+
+/* Search Overlay */
+.bb-search-section {
+  position: relative;
+  margin-top: 30px; /* Moved below the banner, NO OVERLAP */
+  z-index: 10;
+  margin-bottom: 50px;
+}
+
+.bb-section-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Promotions Grid */
+.bb-promotions {
+  padding: 40px 0;
+  background-color: transparent;
+}
+
+.promotions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.promo-card {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 180px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.promo-card:hover {
+  transform: translateY(-4px);
+}
+
+.promo-img {
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-weight: bold;
+}
+
+.promo-1 .promo-img { background: url('https://storage.googleapis.com/futa-busline-cms-dev/343x137_3_a9b1c7dc4a/343x137_3_a9b1c7dc4a.png') center/cover; }
+.promo-2 .promo-img { background: url('https://storage.googleapis.com/futa-busline-cms-dev/343x137_2_c90ad73087/343x137_2_c90ad73087.png') center/cover; }
+.promo-3 .promo-img { background: url('https://storage.googleapis.com/futa-busline-cms-dev/343x137_a7eb977da4/343x137_a7eb977da4.png') center/cover; }
+
+/* Popular Routes Grid */
+.bb-popular-routes {
+  padding: 40px 0;
+  background-color: #fffaf0; /* matching pale peach background for this section */
+}
+
+.bb-routes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.bb-route-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column; /* Stack image and list vertically */
+  border: 1px solid #eee;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bb-route-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.route-thumbnail {
+  width: 100%;
+  height: 160px;
+  background-color: #ccc;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.route-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+
+.bb-route-card:hover .route-bg {
+  transform: scale(1.1);
+}
+
+.route-thumb-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 20px 15px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.85));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.route-thumb-label {
+  font-size: 13px;
+  opacity: 0.9;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.route-thumb-city {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.route-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.route-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ebebeb;
+  padding: 15px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.route-item:last-child {
+  border-bottom: none;
+}
+
+.route-item:hover {
+  background-color: #f9f9f9;
+}
+
+.route-item-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.destination {
+  font-weight: 600;
+  color: #0060C4;
+  font-size: 15px;
+}
+
+.distance {
+  color: #777;
+  font-size: 13px;
+}
+
+.route-item-right {
+  display: flex;
+  align-items: center;
+}
+
+.price {
+  color: #333;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* BlueBus Stats Section */
+.bb-stats-section {
+  padding: 60px 0;
+  background-color: #fff;
+  margin-top: 40px;
+}
+
+.bb-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.stat-item {
+  padding: 24px;
+}
+
+.stat-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: #E6F0FA;
+  color: #0060C4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.stat-item h3 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.stat-item p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .promotions-grid, .bb-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .promotions-grid, .bb-routes-grid, .bb-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .bb-route-card {
+    flex-direction: column;
+  }
+  .route-thumbnail {
+    width: 100%;
+    height: 160px;
+  }
+}

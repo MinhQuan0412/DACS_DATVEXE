@@ -1,0 +1,128 @@
+.about-page {
+  background-color: #f7f7f7;
+  padding-bottom: 60px;
+}
+
+.about-hero-section {
+  padding: 40px 0 20px 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-overlay {
+  display: none;
+}
+
+.about-hero-content {
+  color: #333;
+}
+
+.about-main-content {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.about-section-row {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.about-section-row:last-child {
+  margin-bottom: 0;
+}
+
+.about-section-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-col-img {
+  flex: 1;
+}
+
+.about-col-text {
+  flex: 1;
+}
+
+.about-card-illustration {
+  height: 250px;
+  width: 100%;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.about-card-illustration:hover {
+  transform: translateY(-5px);
+}
+
+.about-card-illustration.theme-orange {
+  background: linear-gradient(135deg, #0099ff, #0060C4);
+}
+
+.about-card-illustration.theme-blue {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.about-card-illustration.theme-gradient {
+  background: linear-gradient(135deg, #1fa2ff, #12d8fa, #a6ffcb);
+  color: #0060C4;
+}
+
+.about-card-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.about-card-illustration h4 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.section-heading {
+  color: #0060C4;
+  font-size: 26px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.about-bullet-list {
+  list-style: none;
+  padding: 0;
+}
+
+.about-bullet-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.about-bullet-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #333;
+  font-weight: bold;
+}
+
+.red-bullets li::before {
+  color: #0060C4;
+}
+
+@media (max-width: 768px) {
+  .about-section-row, .about-section-row.reverse {
+    flex-direction: column;
+  }
+}

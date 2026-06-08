@@ -1,0 +1,136 @@
+/* FUTA-style Tabbed Auth Box */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 160px);
+  background-color: #f7f7f7;
+  padding: 40px 20px;
+}
+
+.auth-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-card {
+  background: white;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  border: 1px solid #ebebeb;
+}
+
+.auth-tabs {
+  display: flex;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.auth-tab {
+  flex: 1;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: white;
+  color: #888;
+  transition: all 0.2s;
+}
+
+.auth-tab.active {
+  color: #0060C4;
+  border-bottom: 2px solid #0060C4;
+  margin-bottom: -2px; /* overlay the border */
+}
+
+.auth-tab.inactive:hover {
+  background-color: #fafafa;
+  color: #555;
+}
+
+.auth-body {
+  padding: 30px;
+}
+
+.auth-step-desc {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* FUTA Clean Input Group */
+.futa-input-group {
+  margin-bottom: 20px;
+}
+
+.futa-input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.futa-input-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: outline 0.2s, border-color 0.2s;
+}
+
+.futa-input-group input:focus {
+  outline: none;
+  border-color: #0060C4;
+}
+
+.form-options {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.forgot-password {
+  color: #0060C4;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Auth Buttons */
+.futa-action-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #0060C4;
+  color: white;
+  border: none;
+  border-radius: 25px; /* Pill shaped like FUTA */
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.futa-action-btn:hover {
+  background-color: #004d9c;
+}
+
+.btn-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background-color: #e0e0e0;
+}

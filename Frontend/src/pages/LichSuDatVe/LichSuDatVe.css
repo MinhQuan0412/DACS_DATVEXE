@@ -1,0 +1,271 @@
+/* Layout shared */
+.account-page-wrapper {
+  background-color: #f4f6f9;
+  min-height: calc(100vh - 80px);
+  padding: 30px 20px;
+}
+
+.account-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+}
+
+.account-content {
+  flex: 1;
+}
+
+.content-title {
+  font-size: 24px;
+  color: #1a202c;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.content-subtitle {
+  color: #718096;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* History Specific */
+.history-filter-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 150px;
+}
+
+.filter-group label {
+  font-size: 13px;
+  color: #4a5568;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.filter-group input,
+.filter-group select {
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #2d3748;
+  outline: none;
+  transition: border-color 0.2s;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+  border-color: #0060C4;
+}
+
+.filter-group.btn-group {
+  flex: 0;
+  min-width: unset;
+}
+
+.btn-search-history {
+  background-color: transparent;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+  padding: 0 25px;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  height: 40px;
+}
+
+.btn-search-history:hover {
+  border-color: #0060C4;
+  color: #0060C4;
+}
+
+.history-table-container {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table th {
+  background-color: #f8fafc;
+  padding: 15px 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #4a5568;
+  font-weight: 600;
+  border-bottom: 1px solid #edf2f7;
+  border-top: 1px solid #edf2f7;
+}
+
+.history-table td {
+  padding: 15px 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #2d3748;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.empty-state {
+  padding: 60px 0 !important;
+}
+
+.empty-icon {
+  font-size: 40px;
+  color: #cbd5e0;
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  color: #a0aec0;
+  font-size: 15px;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.status-paid {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.status-hold {
+  background-color: #fff8e1;
+  color: #ff8f00;
+  border: 1px solid #ffecb3;
+}
+
+.status-cancelled, .status-inactive {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+}
+
+.status-expired {
+  background-color: #f5f5f5;
+  color: #616161;
+  border: 1px solid #e0e0e0;
+}
+
+.futa-tabs-container {
+  display: flex;
+  border-bottom: 2px solid #e2e8f0;
+  margin-bottom: 25px;
+}
+
+.futa-tab {
+  padding: 12px 25px;
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #718096;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s;
+}
+
+.futa-tab:hover {
+  color: #0060C4;
+}
+
+.futa-tab.active {
+  color: #0060C4;
+}
+
+.futa-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0060C4;
+}
+
+.text-danger { color: #E53935; }
+.font-bold { font-weight: 700; }
+.color-grey { color: #718096; }
+
+.action-buttons-wrapper {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-action-pay, .btn-action-cancel, .btn-action-view {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.btn-action-pay {
+  background-color: #f0f6ff;
+  color: #0060C4;
+  border: 1px solid #0060C4;
+}
+.btn-action-pay:hover {
+  background-color: #0060C4;
+  color: #fff;
+}
+
+.btn-action-cancel {
+  background-color: #fff5f5;
+  color: #E53935;
+  border: 1px solid #E53935;
+}
+.btn-action-cancel:hover {
+  background-color: #E53935;
+  color: #fff;
+}
+
+.btn-action-view {
+  background-color: #f0fff4;
+  color: #2f855a;
+  border: 1px solid #2f855a;
+}
+.btn-action-view:hover {
+  background-color: #2f855a;
+  color: #fff;
+}
+
+.text-dark { color: #2d3748; }
+
+@media (max-width: 768px) {
+  .account-page-container {
+    flex-direction: column;
+  }
+}

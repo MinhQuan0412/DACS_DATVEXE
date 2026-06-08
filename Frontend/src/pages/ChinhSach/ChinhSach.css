@@ -1,0 +1,136 @@
+.policy-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  min-height: 80vh;
+}
+
+@media(min-width: 800px) {
+  .policy-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.policy-sidebar {
+  flex: 1;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: sticky;
+  top: 100px;
+}
+
+.policy-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.policy-nav li {
+  margin-bottom: 0.5rem;
+}
+
+.policy-nav a {
+  display: block;
+  padding: 0.8rem 1rem;
+  color: #4a5568;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.policy-nav a:hover {
+  background-color: #edf2f7;
+  color: #2b6cb0;
+}
+
+.policy-nav li.active a {
+  background-color: #ebf8ff;
+  color: #3182ce;
+  font-weight: 700;
+  border-left: 4px solid #3182ce;
+}
+
+.policy-content {
+  flex: 3;
+  color: #34495e;
+}
+
+.policy-content h1 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.last-updated {
+  color: #a0aec0;
+  font-style: italic;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.policy-section {
+  margin-bottom: 3.5rem;
+}
+
+.policy-section h2 {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 1.25rem;
+}
+
+.policy-section p {
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+.policy-section ul {
+  padding-left: 1.5rem;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+.policy-section li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.highlight-box {
+  background-color: #fffaf0;
+  border-left: 4px solid #dd6b20;
+  padding: 1.25rem;
+  color: #c05621;
+  font-weight: 500;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+}
+
+.policy-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: white;
+}
+
+.policy-table th, .policy-table td {
+  border: 1px solid #e2e8f0;
+  padding: 1rem;
+  text-align: left;
+}
+
+.policy-table th {
+  background-color: #f7fafc;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.policy-table tbody tr:nth-child(even) {
+  background-color: #fcfcfc;
+}

@@ -1,0 +1,101 @@
+.quan-ly-tuyen-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.qlt-header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.qlt-search {
+  flex: 1;
+  max-width: 400px;
+}
+
+.qlt-search-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+}
+
+.qlt-search-input:focus {
+  border-color: #1565C0;
+}
+
+.btn-primary {
+  background-color: #1565C0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-primary:hover {
+  background-color: #0d47a1;
+}
+
+.btn-action {
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.btn-edit-route {
+  background-color: #1565C0;
+  color: white;
+  margin-right: 8px;
+}
+
+.btn-edit-route:hover {
+  background-color: #0d47a1;
+}
+
+.btn-delete-route {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-delete-route:hover {
+  background-color: #d32f2f;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+}
+
+.status-active {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-suspended {
+  background-color: #fff3e0;
+  color: #e65100;
+}

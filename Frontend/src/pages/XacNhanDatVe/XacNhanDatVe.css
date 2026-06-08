@@ -1,0 +1,431 @@
+/* ===== XacNhanDatVe.css ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+.xn-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8f0fe 0%, #f0f7ff 50%, #e3f2fd 100%);
+  padding: 40px 16px 60px;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.xn-confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.xn-wrapper {
+  max-width: 780px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== FADE IN ===== */
+.fade-in {
+  animation: fadeInUp 0.6s ease both;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== SUCCESS BANNER ===== */
+.xn-success-banner {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.xn-success-icon-ring {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #0060C4, #0095ff);
+  border-radius: 50%;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 32px rgba(0, 96, 196, 0.35);
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s both;
+}
+@keyframes popIn {
+  from { transform: scale(0); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.xn-check-icon {
+  font-size: 38px;
+  color: #fff;
+}
+
+.xn-success-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0a1f44;
+  margin: 0 0 8px;
+}
+
+.xn-success-sub {
+  color: #5a7091;
+  font-size: 0.95rem;
+  margin: 0 0 20px;
+}
+
+.xn-booking-code-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 2px solid #0060C4;
+  border-radius: 50px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  color: #0060C4;
+  box-shadow: 0 4px 16px rgba(0,96,196,0.12);
+}
+.xn-booking-code-badge strong {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* ===== TICKET CARD ===== */
+.xn-ticket-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(0, 60, 130, 0.14);
+  margin-bottom: 24px;
+}
+
+.xn-ticket-top {
+  background: linear-gradient(135deg, #0060C4 0%, #0095ff 100%);
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.xn-ticket-logo img {
+  height: 36px;
+  filter: brightness(10);
+}
+
+.xn-ticket-code-top {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.xn-code-label {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.75);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.xn-code-value {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 3px;
+}
+
+.xn-status-badge {
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.xn-status-badge.paid {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.6);
+}
+
+/* ===== PERFORATION ===== */
+.xn-perforation {
+  display: flex;
+  align-items: center;
+  background: #f4f8ff;
+}
+.xn-perf-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e8f0fe, #f0f7ff);
+  flex-shrink: 0;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.08);
+}
+.xn-perf-circle.left  { margin-left: -11px; }
+.xn-perf-circle.right { margin-right: -11px; }
+.xn-perf-dashed {
+  flex: 1;
+  height: 2px;
+  border-top: 2.5px dashed #b8d0f0;
+  margin: 0 4px;
+}
+
+/* ===== TICKET BODY ===== */
+.xn-ticket-body {
+  padding: 24px 28px 28px;
+}
+
+.xn-journey-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 18px;
+  border-bottom: 1px dashed #d6e4f7;
+  margin-bottom: 24px;
+}
+
+.xn-journey-route {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0a1f44;
+}
+.xn-route-icon { color: #0060C4; }
+
+.xn-journey-time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #0060C4;
+  font-weight: 600;
+  margin-left: auto;
+  font-size: 0.95rem;
+}
+.xn-clock-icon { color: #0060C4; }
+
+/* ===== INFO GRID ===== */
+.xn-info-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  .xn-info-grid { 
+    grid-template-columns: 1fr; 
+    gap: 32px;
+  }
+}
+
+.qr-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket-qr-wrapper {
+  background: #f4f8ff;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #d6e4f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.ticket-qr-wrapper img {
+  width: 130px;
+  height: 130px;
+  border-radius: 4px;
+}
+
+.qr-hint {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0060C4;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.xn-section-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #7a99c0;
+  font-weight: 600;
+  margin: 0 0 14px;
+  border-bottom: 1px solid #e8f0fe;
+  padding-bottom: 6px;
+}
+
+.xn-info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #2d3e5a;
+  margin-bottom: 10px;
+}
+.xn-icon { color: #0060C4; font-size: 14px; }
+.xn-seat-highlight { color: #E05A00; font-weight: 700; }
+
+/* ===== JOURNEY PATH ===== */
+.xn-journey-path {
+  padding-left: 10px;
+}
+
+.xn-stop-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.875rem;
+  color: #2d3e5a;
+}
+.xn-stop-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.xn-stop-dot.depart { background: #0060C4; box-shadow: 0 0 0 3px rgba(0,96,196,0.2); }
+.xn-stop-dot.arrive { background: #E05A00; box-shadow: 0 0 0 3px rgba(224,90,0,0.2); }
+
+.xn-stop-line {
+  width: 2px;
+  height: 20px;
+  background: repeating-linear-gradient(to bottom, #b8d0f0 0 4px, transparent 4px 8px);
+  margin-left: 5px;
+  margin-block: 4px;
+}
+
+.xn-stop-name {
+  font-weight: 600;
+  color: #0a1f44;
+  margin: 0 0 2px;
+}
+.xn-stop-addr {
+  font-size: 0.78rem;
+  color: #7a99c0;
+  margin: 0 0 2px;
+}
+.xn-stop-time {
+  font-size: 0.78rem;
+  color: #E05A00;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ===== PAYMENT SUMMARY ===== */
+.xn-payment-summary {
+  background: #f4f8ff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.xn-pay-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #4a6785;
+}
+.xn-pay-row strong { color: #0a1f44; }
+
+.xn-pay-total {
+  border-top: 1px solid #d6e4f7;
+  padding-top: 10px;
+  font-weight: 700;
+}
+.xn-total-amount {
+  font-size: 1.25rem;
+  color: #E05A00 !important;
+}
+
+/* ===== ACTIONS ===== */
+.xn-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.xn-btn {
+  flex: 1;
+  min-width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.xn-btn-print {
+  background: #0060C4;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0,96,196,0.28);
+}
+.xn-btn-print:hover {
+  background: #0050a4;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,96,196,0.35);
+}
+
+.xn-btn-history {
+  background: #fff;
+  color: #0060C4;
+  border: 2px solid #0060C4;
+}
+.xn-btn-history:hover {
+  background: #e8f0fe;
+  transform: translateY(-2px);
+}
+
+.xn-btn-home {
+  background: #fff;
+  color: #5a7091;
+  border: 2px solid #d0dcec;
+}
+.xn-btn-home:hover {
+  background: #f0f4fa;
+  transform: translateY(-2px);
+}
+
+/* ===== NOTE BOX ===== */
+.xn-note-box {
+  background: #fff9e6;
+  border: 1px solid #ffe080;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 0.875rem;
+  color: #5a4500;
+  line-height: 1.6;
+}
+
+/* ===== PRINT ===== */
+@media print {
+  .xn-confetti-canvas,
+  .xn-success-banner,
+  .xn-actions,
+  .xn-note-box { display: none; }
+  .xn-page { background: #fff; padding: 0; }
+  .xn-ticket-card { box-shadow: none; border: 1px solid #ccc; }
+}

@@ -1,0 +1,478 @@
+/* ============================================
+   REGISTER PAGE — Clean Premium Design
+   Two-column layout inspired by FUTA
+   Blue theme (#0060C4)
+   ============================================ */
+
+/* --- Page --- */
+.rg-page {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f0f4f8;
+}
+
+.rg-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 480px;
+  min-height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 20px 60px rgba(0, 50, 120, 0.10),
+    0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* =====================
+   RIGHT PANEL
+   ===================== */
+.rg-right {
+  flex: 1;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tabs */
+.rg-tabs {
+  display: flex;
+  border-bottom: 1px solid #eaeef3;
+}
+
+.rg-tab {
+  flex: 1;
+  text-align: center;
+  padding: 18px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #9ca3af;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.rg-tab:hover {
+  color: #6b7280;
+}
+
+.rg-tab--active {
+  color: #0060C4;
+}
+
+.rg-tab--active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 20%;
+  right: 20%;
+  height: 3px;
+  background: #0060C4;
+  border-radius: 3px 3px 0 0;
+}
+
+/* Form area */
+.rg-form-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 36px 36px;
+  overflow: hidden;
+}
+
+.rg-slide {
+  flex: 1;
+}
+
+.rg-slide--forward {
+  animation: rgSlideIn 0.3s ease-out;
+}
+
+.rg-slide--backward {
+  animation: rgSlideBack 0.3s ease-out;
+}
+
+@keyframes rgSlideIn {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes rgSlideBack {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Form titles */
+.rg-form-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+  margin-top: 8px;
+}
+
+.rg-form-desc {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.rg-form-desc strong {
+  color: #0060C4;
+}
+
+/* Input fields */
+.rg-field {
+  margin-bottom: 18px;
+}
+
+.rg-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 7px;
+}
+
+.rg-field input[type="tel"],
+.rg-field input[type="text"],
+.rg-field input[type="email"],
+.rg-field input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #dde2e8;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #1f2937;
+  background: #fafbfc;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  font-family: inherit;
+}
+
+.rg-field input:focus {
+  border-color: #0060C4;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(0, 96, 196, 0.08);
+}
+
+.rg-field input::placeholder {
+  color: #b0b8c4;
+}
+
+/* Input with Icon */
+.rg-input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.rg-field-icon {
+  position: absolute;
+  left: 14px;
+  color: #9ca3af;
+  font-size: 16px;
+  pointer-events: none;
+  transition: color 0.2s;
+}
+
+.rg-input-with-icon input {
+  padding-left: 42px !important;
+}
+
+.rg-input-with-icon input:focus + .rg-field-icon,
+.rg-input-with-icon:focus-within .rg-field-icon {
+  color: #0060C4;
+}
+
+/* Password toggle */
+.rg-field-pwd {
+  position: relative;
+}
+
+.rg-field-pwd input {
+  padding-right: 46px;
+}
+
+.rg-pwd-toggle {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: #9ca3af;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, background 0.2s;
+}
+
+.rg-pwd-toggle:hover {
+  color: #374151;
+  background: #f3f4f6;
+}
+
+/* Password strength */
+.rg-pwd-strength {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.rg-strength-bars {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+
+.rg-str-bar {
+  height: 4px;
+  flex: 1;
+  border-radius: 2px;
+  background: #e5e7eb;
+  transition: background-color 0.3s;
+}
+
+/* Validation messages */
+.rg-msg {
+  font-size: 12px;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.rg-msg--err {
+  color: #ef4444;
+}
+
+.rg-msg--ok {
+  color: #22c55e;
+}
+
+/* OTP */
+.rg-otp-wrap {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.rg-otp-input {
+  width: 48px;
+  height: 54px;
+  border: 1.5px solid #dde2e8;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  background: #fafbfc;
+  outline: none;
+  transition: all 0.2s ease;
+  caret-color: #0060C4;
+  font-family: inherit;
+}
+
+.rg-otp-input:focus {
+  border-color: #0060C4;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(0, 96, 196, 0.1);
+}
+
+.rg-otp-input.filled {
+  border-color: #0060C4;
+  background: #eef4ff;
+}
+
+/* Hide number spinners */
+.rg-otp-input::-webkit-outer-spin-button,
+.rg-otp-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.rg-otp-resend {
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 22px;
+}
+
+.rg-otp-resend strong {
+  color: #0060C4;
+}
+
+.rg-link-btn {
+  background: none;
+  border: none;
+  color: #0060C4;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+.rg-link-btn:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.rg-btn {
+  width: 100%;
+  padding: 13px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-family: inherit;
+}
+
+.rg-btn--primary {
+  background: #0060C4;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 96, 196, 0.25);
+}
+
+.rg-btn--primary:hover {
+  background: #0050a8;
+  box-shadow: 0 4px 14px rgba(0, 96, 196, 0.35);
+}
+
+.rg-btn--primary:active {
+  transform: scale(0.985);
+}
+
+.rg-btn--primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.rg-btn--success {
+  background: linear-gradient(135deg, #059669, #10b981);
+  color: white;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.25);
+}
+
+.rg-btn--success:hover {
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+}
+
+.rg-btn--success:active {
+  transform: scale(0.985);
+}
+
+.rg-btn--outline {
+  background: transparent;
+  color: #6b7280;
+  border: 1.5px solid #e0e5ec;
+  margin-top: 10px;
+  box-shadow: none;
+}
+
+.rg-btn--outline:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  color: #374151;
+}
+
+/* Terms */
+.rg-terms {
+  margin-bottom: 22px;
+}
+
+.rg-terms label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: #6b7280;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.rg-terms input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  margin-top: 2px;
+  accent-color: #0060C4;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.rg-terms a {
+  color: #0060C4;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.rg-terms a:hover {
+  text-decoration: underline;
+}
+
+/* Switch link */
+.rg-switch {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.rg-switch a {
+  color: #0060C4;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.rg-switch a:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+@media (max-width: 800px) {
+  .rg-page {
+    padding: 20px 12px;
+    align-items: flex-start;
+  }
+
+  .rg-wrapper {
+    flex-direction: column;
+    max-width: 480px;
+    border-radius: 16px;
+  }
+
+  .rg-form-area {
+    padding: 8px 24px 28px;
+  }
+}
+
+@media (max-width: 420px) {
+  .rg-form-area {
+    padding: 8px 18px 24px;
+  }
+
+  .rg-otp-input {
+    width: 42px;
+    height: 48px;
+    font-size: 20px;
+    border-radius: 8px;
+  }
+
+  .rg-otp-wrap {
+    gap: 7px;
+  }
+}

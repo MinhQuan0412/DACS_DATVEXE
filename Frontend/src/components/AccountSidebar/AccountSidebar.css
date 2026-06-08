@@ -1,0 +1,91 @@
+.account-sidebar {
+  width: 280px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+  flex-shrink: 0;
+}
+
+.account-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 500;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.nav-item .nav-icon {
+  margin-right: 15px;
+  font-size: 20px;
+  display: flex;
+  color: #0060C4;
+}
+
+.nav-item span {
+  font-size: 15px;
+}
+
+.nav-item:hover {
+  background-color: #f0f7ff;
+  color: #0060C4;
+}
+
+.nav-item.active {
+  background-color: #eaf3fc;
+  color: #0060C4;
+  font-weight: 600;
+}
+
+.logout-item {
+  margin-top: 15px;
+  border-top: 1px solid #f0f4f8;
+  border-radius: 0 0 10px 10px;
+  padding-top: 20px;
+  color: #e53e3e;
+}
+
+.logout-item .nav-icon {
+  color: #e53e3e;
+}
+
+.logout-item:hover {
+  background-color: #fff5f5;
+  color: #c53030;
+}
+
+@media (max-width: 768px) {
+  .account-sidebar {
+    width: 100%;
+  }
+  .account-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 5px;
+    gap: 10px;
+  }
+  .nav-item {
+    flex-shrink: 0;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  .nav-item .nav-icon {
+    margin-right: 8px;
+    font-size: 16px;
+  }
+  .logout-item {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 10px;
+  }
+}

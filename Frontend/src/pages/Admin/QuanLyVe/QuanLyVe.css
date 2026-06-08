@@ -1,0 +1,339 @@
+/* ===== QUẢN LÝ VÉ ĐẶT ===== */
+
+.quan-ly-ve-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ---- Stats Bar ---- */
+.qlv-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.qlv-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 16px;
+  border-right: 1px solid #f0f4f8;
+}
+
+.qlv-stat-item:last-child { border-right: none; }
+
+.qlv-stat-num {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.qlv-stat-label {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+/* ---- Filter Bar ---- */
+.qlv-header-actions {
+  background: #fff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid #e2e8f0;
+}
+
+.qlv-filters {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.2fr 1.4fr 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.qlv-filter-input,
+.qlv-filter-select,
+.qlv-filter-date {
+  padding: 9px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 13.5px;
+  color: #374151;
+  background: #f9fafb;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.qlv-filter-input:focus,
+.qlv-filter-select:focus,
+.qlv-filter-date:focus {
+  border-color: #1565C0;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(21,101,192,0.1);
+}
+
+.search-box-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-box-wrapper .qlv-filter-input {
+  padding-right: 36px;
+}
+
+.search-box-wrapper .search-icon {
+  position: absolute;
+  right: 11px;
+  color: #94a3b8;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+/* ---- Table ---- */
+.admin-table th,
+.admin-table td {
+  vertical-align: middle;
+}
+
+/* Nút thao tác luôn nằm ngang */
+.action-btns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.btn-action {
+  padding: 6px 9px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  transition: all 0.18s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.btn-confirm       { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+.btn-confirm:hover { background: #16a34a; color: #fff; }
+
+.btn-edit-ticket       { background: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
+.btn-edit-ticket:hover { background: #d97706; color: #fff; }
+
+.btn-cancel-ticket       { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+.btn-cancel-ticket:hover { background: #dc2626; color: #fff; }
+
+.btn-view       { background: #f8fafc; color: #64748b; border: 1px solid #e2e8f0; }
+.btn-view:hover { background: #64748b; color: #fff; }
+
+/* ---- Status Badges ---- */
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 700;
+  display: inline-block;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.status-paid     { background: #f0fdf4; color: #15803d; }
+.status-unpaid   { background: #fff7ed; color: #c2410c; }
+.status-cancelled { background: #fef2f2; color: #b91c1c; }
+
+/* Mờ dòng đã hủy */
+.row-cancelled { opacity: 0.6; }
+
+/* Highlight từ thông báo */
+.row-highlighted {
+  background-color: #fffde7 !important;
+  border-left: 3px solid #f59e0b !important;
+  animation: pulse-hl 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-hl {
+  from { background-color: #fffde7; }
+  to   { background-color: #fef9c3; }
+}
+
+/* ---- Modal Detail ---- */
+.ticket-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.detail-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #94a3b8;
+  font-weight: 700;
+}
+
+.detail-value {
+  font-size: 14px;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.cancel-reason-box {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: #fef2f2;
+  border-left: 4px solid #ef4444;
+  border-radius: 6px;
+}
+
+.cancel-reason-box strong { color: #b91c1c; font-size: 13px; }
+.cancel-reason-box p { margin: 6px 0 0; color: #555; font-size: 14px; line-height: 1.5; }
+
+/* ---- Edit Modal ---- */
+.edit-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.p-input-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 6px;
+}
+
+.p-input-group input,
+.w-select-modern {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.p-input-group input:focus,
+.w-select-modern:focus {
+  border-color: #1565C0;
+  box-shadow: 0 0 0 3px rgba(21,101,192,0.1);
+}
+
+/* Seat grid */
+.edit-seat-selector {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px dashed #cbd5e1;
+}
+
+.seat-grid-mini {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.mini-seat {
+  height: 42px;
+  border-radius: 7px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11.5px;
+  font-weight: 700;
+  transition: all 0.15s;
+  color: #64748b;
+}
+
+.mini-seat:hover:not(:disabled) { border-color: #1565C0; background: #eff6ff; color: #1565C0; }
+.mini-seat.selected { background: #1565C0; color: #fff; border-color: #1e40af; }
+.mini-seat.booked   { background: #f1f5f9; color: #cbd5e1; cursor: not-allowed; }
+
+.seat-legend-mini {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.legend-item .box {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.legend-item .box.available { background: #fff; border: 1px solid #e2e8f0; }
+.legend-item .box.booked    { background: #f1f5f9; }
+.legend-item .box.selected  { background: #1565C0; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+  .qlv-filters {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .qlv-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .qlv-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ticket-detail-grid,
+  .edit-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .action-btns {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .qlv-filters {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,173 @@
+/* ===== QUẢN LÝ CHUYẾN XE — RESPONSIVE ===== */
+
+.quan-ly-chuyen-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ---- Filter Bar ---- */
+.qlc-header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid #e2e8f0;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.qlc-filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.qlc-filter-input,
+.qlc-filter-select,
+.qlc-filter-date {
+  padding: 9px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 13.5px;
+  color: #374151;
+  background: #f9fafb;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.qlc-filter-input:focus,
+.qlc-filter-select:focus,
+.qlc-filter-date:focus {
+  border-color: #1565C0;
+  box-shadow: 0 0 0 3px rgba(21,101,192,0.1);
+  background: white;
+}
+
+.qlc-header-actions > div:last-child {
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+/* ---- Buttons ---- */
+.btn-primary {
+  background: linear-gradient(135deg, #1565C0, #1976D2);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(21,101,192,0.25);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0d47a1, #1565C0);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(21,101,192,0.35);
+}
+
+.btn-action {
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12.5px;
+  font-weight: 600;
+  border: none;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-edit  { background: #f1f5f9; color: #475569; }
+.btn-edit:hover  { background: #e2e8f0; }
+.btn-delete { background: #fef2f2; color: #dc2626; }
+.btn-delete:hover { background: #fee2e2; }
+.btn-view  { background: #f0f9ff; color: #0369a1; }
+.btn-view:hover  { background: #e0f2fe; }
+
+.action-btns {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ---- Status Badges ---- */
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.status-pending  { background: #fff7ed; color: #c2410c; }
+.status-running  { background: #eff6ff; color: #1d4ed8; }
+.status-completed { background: #f0fdf4; color: #15803d; }
+.status-cancelled { background: #fef2f2; color: #b91c1c; }
+
+/* ---- Trip Details (modal view) ---- */
+.trip-details-list {
+  margin-top: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet: 2 cột filter */
+@media (max-width: 1024px) {
+  .qlc-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile: 1 cột filter, button full width */
+@media (max-width: 640px) {
+  .qlc-header-actions {
+    padding: 14px;
+    flex-direction: column;
+  }
+
+  .qlc-filters {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .qlc-header-actions > div:last-child {
+    width: 100%;
+  }
+
+  .btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Card-style rows on mobile (từ AdminShared) */
+  .admin-table td {
+    font-size: 13px;
+  }
+
+  .action-btns {
+    justify-content: flex-end;
+  }
+}
